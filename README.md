@@ -7,31 +7,31 @@ a. Создайте классы
 - Engineer - Инженер - дешифровщик черных ящиков.
 
 b. Класс BlackBox содержит следующие методы:
-■ public function addLog($message) - добавляет очередную строку в свое свойство $data
-■ public function getDataForEngineer(Engineer $engineer) - возвращает свои данные для
+- public function addLog($message) - добавляет очередную строку в свое свойство $data
+- public function getDataForEngineer(Engineer $engineer) - возвращает свои данные для
 инженера.
 
 c. Класс Plane должен содержать методы:
-■ public function flyAndCrush()
+- public function flyAndCrush()
 {
 $this->crushProcess();
 }
-■ flyProcess - процесс полета может проходить по-другому для других самолетов, пишет лог в
+- flyProcess - процесс полета может проходить по-другому для других самолетов, пишет лог в
 черный ящик, придумайте что будет записано в этом методе в черный ящик.
-■ crushProcess - процесс крушения переопределен быть не может, пишет лог в черный ящик,
+- crushProcess - процесс крушения переопределен быть не может, пишет лог в черный ящик,
 придумайте что будет записано в этом методе в черный ящик.
-■ protected function addLog($message) - передает сообщение для записи в лог черного ящика.
-■ public function getBoxForEngineer(Engineer $engineer)
+- protected function addLog($message) - передает сообщение для записи в лог черного ящика.
+- public function getBoxForEngineer(Engineer $engineer)
 {
 $engineer->setBox($this->blackBox);
 }
 
 d. Реализуйте класс Engineer
-■ public function setBox(BlackBox $blackBox) - устанавливает черный ящик для дешифрации у
+- public function setBox(BlackBox $blackBox) - устанавливает черный ящик для дешифрации у
 инженера
-■ public function takeBox(Plane $plane) - должен доставать черный ящик из самолета
+- public function takeBox(Plane $plane) - должен доставать черный ящик из самолета
 (посмотрите какой подходящий метод есть в классе Plane)
-■ public function decodeBox() - декодирует черный ящик - выводит на экран лог черного
+- public function decodeBox() - декодирует черный ящик - выводит на экран лог черного
 ящика
 
 e. Реализуйте методы без изменения области видимости методов и свойств.
